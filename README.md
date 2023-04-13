@@ -338,8 +338,11 @@ Datenbanken sind eine leistungsstarke Möglichkeit, Daten permanent zu speichern
 
 	```
 
-### 4) Delegates
-
+## 4) Delegates
+<kbd>
+###### Frage:
+Erklären Sie, was man in C# unter Delegates versteht und wo sie verwendet werden. Zeigen Sie an Hand eines typischen Beispiels die C#-Syntax von Delegates.
+</kbd>
 In C# ist ein Delegate ein spezieller Typ, der eine Referenz auf eine Methode mit einem bestimmten Signatur enthält. Mit Delegates können Methoden als Parameter an andere Methoden übergeben oder als Rückgabewert zurückgegeben werden.
 
 Delegates werden oft in der ereignisgesteuerten Programmierung verwendet, um Event-Handler-Funktionen zu definieren, die aufgerufen werden, wenn ein bestimmtes Ereignis eintritt. Delegates können auch in der asynchronen Programmierung und in der parallelen Programmierung nützlich sein.
