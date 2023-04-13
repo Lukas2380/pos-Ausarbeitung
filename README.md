@@ -79,13 +79,33 @@ Collections sind Datentypen in C#, die eine Gruppe von Objekten speichern. Die C
 
 In C# gibt es verschiedene Datentypen für Collections, die es ermöglichen, mehrere Werte in einer einzigen Variablen zu speichern und zu verwalten. Zu den Collection-Datentypen in C# gehören beispielsweise:
 
-* `List<T>`:
+*  `List <T>`
+*  `Dictionary <T>`  
+*  `Queue <T>`
+*  `LinkedList <T>`
+*  `SortedDictionary<K,V> SortedList\<K,V>` 
+*  `Stack<T>`
+*  `HashSet <T>`
+
+### List \<T>
 Stellt eine stark typisierte Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.
-Syntax: 
-`List<int> nums = new List<int>(); // Eine Liste von Integers.`
+####  Beispiel:
 
-Eigenschaften:
-
+```cs
+public static void Main(string[] args)
+{
+    List<int> myintegers = new List<int>();
+    myintegers.Add(1);
+    myintegers.Add(2);
+    myintegers.Add(3);
+    
+    foreach (int i in myintegers)
+    {
+        Console.Write("${i.ToString()} "); // 1 2 3
+    }
+}
+```
+#### Eigenschaften:
 
 | Name  |  Eigenschaft |
 | ------------ | ------------ |
@@ -94,32 +114,74 @@ Eigenschaften:
 | Item[Int32] | Ruft das Element am angegebenen Index ab oder legt dieses fest. |
 Diese Eigenschaften sind nicht spezifisch für die List, andere Arten der Collection haben diese, vielleicht in einer leicht abweichenden Art, auch. 
 
-Besondere Methoden:
-
-| Methodenname  | Beschreibung |
-| ------------ | ------------ |
-| Add(T)  |  Fügt am Ende der Liste ein Objekt hinzu. |
-| AddRange(IEnumerable<T>) | Fügt die Elemente der angegebenen Auflistung am Ende von der Liste hinzu.  |
-| Clear() | Entfernt alle Elemente aus der Liste.  |
-| Contains(T)  | Bestimmt, ob sich ein Element in List<T> befindet.   |
-| CopyTo(T[]) | Kopiert die gesamte List<T> in ein kompatibles eindimensionales Array, wobei am Anfang des Zielarrays begonnen wird. |
-| Insert(Int32, T) | Fügt am angegebenen Index ein Element in die List<T> ein. |
-
-* `Dictionary<TKey, TValue>`:
+### `Dictionary <K,V>`
 Das Dictionary speichert eine Sammlung von Schlüssel-Wert-Paaren, wobei jeder Schlüssel eindeutig ist und auf einen bestimmten Wert verweist. Diese Collection ist besonders nützlich, wenn man schnell auf bestimmte Elemente zugreifen möchte.
-Syntax:
-`Dictionary<int, string> dictionary = new Dictionary<int, string>(); // Ein Dictionary mit einem Integer als Key und einem String als Value`
 
-* `Queue<T>`:
+#### Beispiel:
+~~~cs
+ Dictionary<String, Pupil> allPupils = new Dictionary<String,Pupil>();
+ Pupil x = allPupils["Müller"]; 
+ Console.WriteLine("${x.Vorname} {X.Nachname} {x.Klasse}");
+~~~
+
+ * Die Schlüsselklasse muss Vergleichsoperationen durchführen können. Das heißt gegebenenfalls muss diese eine `CompareTo` Methode implementiert haben.
+ * Die Schlüssel müssen einzigartig sein. (unique)  
+Also wenn man versucht ein Element mit einem Schlüssel hinzuzufügen wenn bereits ein Schlüssel im Dictionary verwendet wird, wird das Programm eine Exception werfen.
+ * Ein Schlüssel darf nicht `null` sein.
+
+ #### Methoden:
+ *  `bool Remove(TKey)`
+    * löscht das Elemente und liefert true zurück wenn das Element erfolgreich gefunden wurde.
+ *  `Item [TKey]`
+    *   Der Wert wird anhand eines Schlüssels zurückgegeben bzw. gesetzt.
+ *  `Add(TKey, TValue)`
+    *  Der Schlüssel und der Wert werden hinzugefügt.
+
+### Queues \<T>
 Eine Queue ist eine Collection, die nach dem Prinzip "First-In-First-Out" (FIFO) funktioniert. Das erste Element, das in die Queue eingefügt wird, ist das erste, das aus der Queue entfernt wird.
+
 ![](https://www.tutorialsteacher.com/Content/images/csharp/csharp-queue.png)
-Syntax: 
-`Queue<string> numbers = new Queue<string>(); // Eine Queue mit den Namen von Zahlen als strings`
 
+#### Die wichtigsten Methoden:
+* `Enqueue(T Element)`
+  *  Ein Element vom generischen Typ T wird der Warteschlange hinzugefügt.
+* `T Deque()`
+  *  Es wird ein Elenemt am Kopf der Queue entfernt und das Objekt wird zurückgegeben.
+* `Clear(), Contains(T Element), Peek(), ....`
 
-* `Stack<T>`
+### `SortedDictionary<K,V> SortedList<K,V>`
+Das SortedDictionary und die Sorted List sind ähnlich strukturiert wie ein gewöhnlichtes Dictionary/List wobei diese anhand der Schlüssel sortiert werden können.
+*   Ist ein Array von 'Key-Value-Pairs'
+*   Ein Schlüssel muss 'unique' sein und darf nicht `null` sein
+*   Eine SortedList benötigt weniger Speicher als ein SortedDictionary.
+*   Die SortedList ist schneller beim Datenabruf als ein SortedDictionary.
+*   Das SortedDictionary ist jedoch schneller beim Einfügen und Löschen von 'Key-Value-Pairs'.
+
+### Stack \<T>
 Ein Stack ist eine Collection, die nach dem Prinzip "Last-In-First-Out" (LIFO) funktioniert. Das letzte Element, das in den Stack eingefügt wird, ist das erste, das aus dem Stack entfernt wird.
-![](https://f4n3x6c5.stackpathcdn.com/UploadFile/78607b/stack-in-C-Sharp/Images/Stack.jpg)
+#### Die wichtigesten Methoden:
+*   `Push(T item) `
+    * Fügt ein Element oben auf den Stack hinzu.
+*   `T Peek()`
+    *  Retourned das oberste Stack-Element.
+*   `T Pop()`
+    * Entfernt das oberste Element vom Stack und es wird zurückgegeben.
+*  `Contains(T item)`
+    * Überprüft ob ein existierendes Element sich auf dem Stack befindet oder nicht.
+*  `Clear()`
+    *   Entfernt alle Element vom Stack.
+
+
+### `HashSet<T>`
+Die `HashSet<T>` Klasse stellt hochperformante Vorgänge zu Verfügung. Das Set ist eine Auflistung, die keine doppelten Elemente enthält und wo diese sich in keiner Reihenfolge befinden. Neben den üblichen generischen Methoden wie Add, Count, Contains, Clear und vielen anderne verfügt die `HashSet<T>` Klasse auch viele Methoden die bekannt sind aus der Mengenlehre:
+
++   `UnionWith`
++   `IntersectWith`
++   `ExceptWith`
++   `SymetricExeptWith`
++   `IsSubSetOf`
++   `IsSuperSetOf`
 
 Arrays hingegen sind auch eine Möglichkeit, eine Sammlung von Elementen in C# zu speichern. Ein Array ist jedoch eine feste Sammlung von Elementen, die bei der Deklaration eine bestimmte Größe haben muss und nicht dynamisch erweitert werden kann. Die interne Speicherung eines Arrays erfolgt in der Regel als zusammenhängender Block im Speicher, während Collections typischerweise auf dynamisch allokiertem Speicher arbeiten.
+
 
