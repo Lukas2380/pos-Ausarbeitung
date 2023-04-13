@@ -204,6 +204,12 @@ Ein Array ist jedoch eine feste Sammlung von Elementen, die bei der Deklaration 
 
 
 ## 3) Permanentes Speichern von Daten
+<kbd>
+Frage:
+</br>
+Beschreiben Sie, wie Daten mit Hilfe von C#-Programmen permanent gespeichert werden können. Gehen Sie auf die Einsatzmöglichkeiten sowie die Vor- und Nachteile der unterschiedlichen Dateiarten ein und geben Sie auch Codebeispiele an.  
+was ist da gemeint
+</kbd>
 In C# gibt es verschiedene Möglichkeiten, Daten permanent zu speichern. Hier sind einige Beispiele:
 
 ### 3.1) Textdateien
@@ -340,7 +346,8 @@ Datenbanken sind eine leistungsstarke Möglichkeit, Daten permanent zu speichern
 
 ## 4) Delegates
 <kbd>
-###### Frage:
+Frage:
+</br>
 Erklären Sie, was man in C# unter Delegates versteht und wo sie verwendet werden. Zeigen Sie an Hand eines typischen Beispiels die C#-Syntax von Delegates.
 </kbd>
 In C# ist ein Delegate ein spezieller Typ, der eine Referenz auf eine Methode mit einem bestimmten Signatur enthält. Mit Delegates können Methoden als Parameter an andere Methoden übergeben oder als Rückgabewert zurückgegeben werden.
