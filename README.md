@@ -48,7 +48,7 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
 * Expliziete Konvertierung
      Der Compiler fordert eine explizite Konvertierung wenn eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann. Will man einen String      in einen Integer umwandeln dann gibt es verschiedene Wege:
      
-    * Cast:
+    * _Cast_:
     
         ```c#
         string stringNum = "123";
