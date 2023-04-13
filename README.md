@@ -49,31 +49,33 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
      Der Compiler fordert eine explizite Konvertierung wenn eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann. Will man einen String      in einen Integer umwandeln dann gibt es verschiedene Wege:
      
     * Cast:
-    ```c#
-    string stringNum = "123";
-    int intNum = (int)stringNum;
-    ```
-    Cast funktioniert nur dann, wenn der Wert des Strings tatsächlich in einen Integer umgewandelt werden kann.
+    
+        ```c#
+        string stringNum = "123";
+        int intNum = (int)stringNum;
+        ```
+        Cast funktioniert nur dann, wenn der Wert des Strings tatsächlich in einen Integer umgewandelt werden kann.
 
     * Verwendung der Methode `int.Parse()`
-    ```c#
-    string stringNum = "123"; 
-    int intNum = int.Parse(stringNum);
-    ```
-    `int.Parse()` funktioniert genau so wie `Convert.ToInt32()`. Bei beiden besteht das selbe Problem, dass genauso eine Ausnahme ausgelöst wird wenn die Umwandlung       nicht gültig ist.
+    
+        ```c#
+        string stringNum = "123"; 
+        int intNum = int.Parse(stringNum);
+        ```
+        `int.Parse()` funktioniert genau so wie `Convert.ToInt32()`. Bei beiden besteht das selbe Problem, dass genauso eine Ausnahme ausgelöst wird wenn die                   Umwandlung nicht gültig ist.
     * Verwendung von `TryParse()`
 
-    ```c#
-    string stringNum = "123";
-    int intNum;
-    bool success = int.TryParse(stringNum, out intNum);
-    if (success) {
-    // Der String konnte erfolgreich in einen Integer umgewandelt werden.
-    } else {
-    // Der String konnte nicht in einen Integer umgewandelt werden.
-    }
-    ```
-    Im Gegensatz zu den anderen Methoden gibt `int.TryParse()` keinen Fehler aus, wenn der String nicht in einen gültigen Integer umgewandelt werden kann. Stattdessen     gibt es einen boolschen Rückgabewert zurück, der angibt, ob die Konvertierung erfolgreich war oder nicht. Wenn die Konvertierung erfolgreich war, wird der             konvertierte Integer in der Variable "intNum" gespeichert. Andernfalls bleibt die Variable "intNum" unverändert.
+        ```c#
+        string stringNum = "123";
+        int intNum;
+        bool success = int.TryParse(stringNum, out intNum);
+        if (success) {
+        // Der String konnte erfolgreich in einen Integer umgewandelt werden.
+        } else {
+        // Der String konnte nicht in einen Integer umgewandelt werden.
+        }
+        ```
+        Im Gegensatz zu den anderen Methoden gibt `int.TryParse()` keinen Fehler aus, wenn der String nicht in einen gültigen Integer umgewandelt werden kann.                  Stattdessen gibt es einen boolschen Rückgabewert zurück, der angibt, ob die Konvertierung erfolgreich war oder nicht. Wenn die Konvertierung erfolgreich                war, wird der konvertierte Integer in der Variable "intNum" gespeichert. Andernfalls bleibt die Variable "intNum" unverändert.
 
 
 
