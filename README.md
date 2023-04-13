@@ -70,3 +70,56 @@ if (success) {
 }
 ```
 Im Gegensatz zu den anderen Methoden gibt `int.TryParse()` keinen Fehler aus, wenn der String nicht in einen gültigen Integer umgewandelt werden kann. Stattdessen gibt es einen boolschen Rückgabewert zurück, der angibt, ob die Konvertierung erfolgreich war oder nicht. Wenn die Konvertierung erfolgreich war, wird der konvertierte Integer in der Variable "intNum" gespeichert. Andernfalls bleibt die Variable "intNum" unverändert.
+
+
+
+###  2) Collections in C#
+
+Collections sind Datentypen in C#, die eine Gruppe von Objekten speichern. Die Collection-Typen umfassen beispielsweise List, Dictionary und Stack. Diese Datentypen sind sehr nützlich, um Daten zu organisieren und zu verwalten. Im Gegensatz zu Arrays können Collections dynamisch erweitert werden.
+
+In C# gibt es verschiedene Datentypen für Collections, die es ermöglichen, mehrere Werte in einer einzigen Variablen zu speichern und zu verwalten. Zu den Collection-Datentypen in C# gehören beispielsweise:
+
+* `List<T>`:
+Stellt eine stark typisierte Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.
+Syntax: 
+`List<int> nums = new List<int>(); // Eine Liste von Integers.`
+
+Eigenschaften:
+
+
+| Name  |  Eigenschaft |
+| ------------ | ------------ |
+| Capacity  | Ruft die Gesamtzahl der Elemente ab, die die interne Datenstruktur ohne Änderung der Größe aufnehmen kann, oder legt diese Anzahl fest.  |
+| Count  | Ruft die Anzahl der Elemente ab, die in List<T> enthalten sind.  |
+| Item[Int32] | Ruft das Element am angegebenen Index ab oder legt dieses fest. |
+Diese Eigenschaften sind nicht spezifisch für die List, andere Arten der Collection haben diese, vielleicht in einer leicht abweichenden Art, auch. 
+
+Besondere Methoden:
+
+| Methodenname  | Beschreibung |
+| ------------ | ------------ |
+| Add(T)  |  Fügt am Ende der Liste ein Objekt hinzu. |
+| AddRange(IEnumerable<T>) | Fügt die Elemente der angegebenen Auflistung am Ende von der Liste hinzu.  |
+| Clear() | Entfernt alle Elemente aus der Liste.  |
+| Contains(T)  | Bestimmt, ob sich ein Element in List<T> befindet.   |
+| CopyTo(T[]) | Kopiert die gesamte List<T> in ein kompatibles eindimensionales Array, wobei am Anfang des Zielarrays begonnen wird. |
+| Insert(Int32, T) | Fügt am angegebenen Index ein Element in die List<T> ein. |
+
+* `Dictionary<TKey, TValue>`:
+Das Dictionary speichert eine Sammlung von Schlüssel-Wert-Paaren, wobei jeder Schlüssel eindeutig ist und auf einen bestimmten Wert verweist. Diese Collection ist besonders nützlich, wenn man schnell auf bestimmte Elemente zugreifen möchte.
+Syntax:
+`Dictionary<int, string> dictionary = new Dictionary<int, string>(); // Ein Dictionary mit einem Integer als Key und einem String als Value`
+
+* `Queue<T>`:
+Eine Queue ist eine Collection, die nach dem Prinzip "First-In-First-Out" (FIFO) funktioniert. Das erste Element, das in die Queue eingefügt wird, ist das erste, das aus der Queue entfernt wird.
+![](https://www.tutorialsteacher.com/Content/images/csharp/csharp-queue.png)
+Syntax: 
+`Queue<string> numbers = new Queue<string>(); // Eine Queue mit den Namen von Zahlen als strings`
+
+
+* `Stack<T>`
+Ein Stack ist eine Collection, die nach dem Prinzip "Last-In-First-Out" (LIFO) funktioniert. Das letzte Element, das in den Stack eingefügt wird, ist das erste, das aus dem Stack entfernt wird.
+![](https://f4n3x6c5.stackpathcdn.com/UploadFile/78607b/stack-in-C-Sharp/Images/Stack.jpg)
+
+Arrays hingegen sind auch eine Möglichkeit, eine Sammlung von Elementen in C# zu speichern. Ein Array ist jedoch eine feste Sammlung von Elementen, die bei der Deklaration eine bestimmte Größe haben muss und nicht dynamisch erweitert werden kann. Die interne Speicherung eines Arrays erfolgt in der Regel als zusammenhängender Block im Speicher, während Collections typischerweise auf dynamisch allokiertem Speicher arbeiten.
+
