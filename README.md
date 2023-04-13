@@ -25,7 +25,7 @@ Werttypen und Verweistypen sind die beiden Hauptkategorien von C#-Typen.
 
     Verweistypen sind Typen die als ```class```, `delegate`, `Array` oder `interface` definiert sind. Wenn eine Variable eines Verweistypen deklariert wird, dann           enthält sie den Wert null, bis eine Instanz dieses Typs zugewiesen oder über den new-Operator eine Instanz erstellt wird. 
     Als Beispiel hier mit einer Klasse: 
-    ```c#
+    ```cs
     MyClass myClass = new MyClass();
     MyClass myClass2 = myClass;
     ```
@@ -39,7 +39,7 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
     Keine besondere Syntax ist für das implizite Konvertieren erforderlich da die Konvertierung immer erfolgreich ist und keine Daten verloren gehen. 
     Beispiele sind Konvertierungen von kleinere in größere Ganzzahltypen wie, wenn ein ```int``` zu einem ```long``` konvertiert wird.
 
-    ```c#
+    ```cs
     // Ein long kann alles halten was ein int halten kann.
     int num = 2147483647;
     long bigNum = num;
@@ -50,7 +50,7 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
      
     * **Cast**:
     
-        ```c#
+        ```cs
         string stringNum = "123";
         int intNum = (int)stringNum;
         ```
@@ -58,14 +58,14 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
 
     * **Verwendung der Methode `int.Parse()`**
     
-        ```c#
+        ```cs
         string stringNum = "123"; 
         int intNum = int.Parse(stringNum);
         ```
         `int.Parse()` funktioniert genau so wie `Convert.ToInt32()`. Bei beiden besteht das selbe Problem, dass genauso eine Ausnahme ausgelöst wird wenn die                   Umwandlung nicht gültig ist.
     * **Verwendung von `TryParse()`**
 
-        ```c#
+        ```cs
         string stringNum = "123";
         int intNum;
         bool success = int.TryParse(stringNum, out intNum);
@@ -97,7 +97,7 @@ In C# gibt es verschiedene Datentypen für Collections, die es ermöglichen, meh
 Stellt eine stark typisierte Liste von Objekten dar, auf die über einen Index zugegriffen werden kann. Stellt Methoden zum Durchsuchen, Sortieren und Bearbeiten von Listen bereit.
 ####  Beispiel:
 
-```
+```cs
 	public static void Main(string[] args)
 	{
 		List<int> myintegers = new List<int>();
@@ -118,6 +118,7 @@ Stellt eine stark typisierte Liste von Objekten dar, auf die über einen Index z
 | Capacity  | Ruft die Gesamtzahl der Elemente ab, die die interne Datenstruktur ohne Änderung der Größe aufnehmen kann, oder legt diese Anzahl fest.  |
 | Count  | Ruft die Anzahl der Elemente ab, die in List<T> enthalten sind.  |
 | Item[Int32] | Ruft das Element am angegebenen Index ab oder legt dieses fest. |
+
 Diese Eigenschaften sind nicht spezifisch für die List, andere Arten der Collection haben diese, vielleicht in einer leicht abweichenden Art, auch. 
 
 ### Dictionary \<K,V>
@@ -162,7 +163,7 @@ Eine Queue ist eine Collection, die nach dem Prinzip "First-In-First-Out" (FIFO)
   *  Es wird ein Elenemt am Kopf der Queue entfernt und das Objekt wird zurückgegeben.
 * `Clear(), Contains(T Element), Peek(), ....`
 
-### `SortedDictionary<K,V> SortedList<K,V>`
+### SortedDictionary\<K,V> SortedList\<K,V>
 Das SortedDictionary und die Sorted List sind ähnlich strukturiert wie ein gewöhnlichtes Dictionary/List wobei diese anhand der Schlüssel sortiert werden können.
 *   Ist ein Array von 'Key-Value-Pairs'
 *   Ein Schlüssel muss 'unique' sein und darf nicht `null` sein
@@ -196,7 +197,7 @@ Die `HashSet<T>` Klasse stellt hochperformante Vorgänge zu Verfügung. Das Set 
 +   `IsSuperSetOf`
 
 
-####Vergleich zu Arrays
+#### Vergleich zu Arrays
 Ein Array ist jedoch eine feste Sammlung von Elementen, die bei der Deklaration eine bestimmte Größe haben muss und nicht dynamisch erweitert werden kann. Die interne Speicherung eines Arrays erfolgt in der Regel als zusammenhängender Block im Speicher, während Collections typischerweise auf dynamisch allokiertem Speicher arbeiten.
 
 
@@ -239,7 +240,7 @@ System.IO.File.WriteAllLines(@"C:\MyFolder\OutputFile.txt", lines);
 #### Mithilfe der System.IO.StreamWriter Klasse:
 Mit dieser Methodik kann man Zeile für Zeile in ein File schreiben.
 ###### Beispiel:
-```
+```cs
 string[] lines = { "My first string", "My second string", "and even a third string" };
 using (System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:\MyFolder\OutputText.txt"))
 	{
@@ -289,7 +290,7 @@ Binärdateien sind Dateien, die Daten in binärer Form enthalten. Sie können ko
 
 ###### Beispiel:
 
-```
+```cs
 using System.IO;
 
 string text = "Dies ist ein Text, der in die Binärdatei geschrieben wird.";
@@ -308,7 +309,7 @@ Datenbanken sind eine leistungsstarke Möglichkeit, Daten permanent zu speichern
 
 * Einen SQL Server im Hintergrund laufen zu haben und sich mittels Code wie diesen zu verbinden:
 
-	```
+	```cs
 	private void Connect(){
 	   string connectionString = @"Data Source=MyServerName;Initial Catalog=MyDbName; User ID=Admin; Password=Root";
 	   SqlConnection connection = new SqlConnection(connectionString);
@@ -319,21 +320,21 @@ Datenbanken sind eine leistungsstarke Möglichkeit, Daten permanent zu speichern
 	```
 
 * Oder mittels Entity Framework:
-Entity Framework wurde von Microsoft entwickelt und dient dazu die Datenbankverbindung für Entwickler zu erleichtern. Es erleichtert den Zugriff auf Datenbanken, indem es Objekte als Schnittstelle zwischen der Anwendung und der Datenbank verwendet.
+	Entity Framework wurde von Microsoft entwickelt und dient dazu die Datenbankverbindung für Entwickler zu erleichtern. Es erleichtert den Zugriff auf 		Datenbanken, indem es Objekte als Schnittstelle zwischen der Anwendung und der Datenbank verwendet.
 
-###### Eine Tabelle die mittels Entity Framework mit Code geschrieben wurde könnte so Ähnlich aussehen: 
-```
-using System;
-using System.Data.Entity;
+	###### Eine Tabelle die mittels Entity Framework mit Code geschrieben wurde könnte so Ähnlich aussehen: 
+	```cs
+	using System;
+	using System.Data.Entity;
 
-public class Customer
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Email { get; set; }
-}
+	public class Customer
+	{
+	    public int Id { get; set; }
+	    public string Name { get; set; }
+	    public string Email { get; set; }
+	}
 
-```
+	```
 
 ### 4) Delegates
 
@@ -342,7 +343,7 @@ In C# ist ein Delegate ein spezieller Typ, der eine Referenz auf eine Methode mi
 Delegates werden oft in der ereignisgesteuerten Programmierung verwendet, um Event-Handler-Funktionen zu definieren, die aufgerufen werden, wenn ein bestimmtes Ereignis eintritt. Delegates können auch in der asynchronen Programmierung und in der parallelen Programmierung nützlich sein.
 
 #### Deklaration eines Delegates:
-```
+```cs
 public delegate int PerformCalculation(int x, int y);
 ```
 
@@ -357,7 +358,7 @@ public delegate int PerformCalculation(int x, int y);
 
 Hier ist ein Beispiel für die Verwendung von Delegates in C#:
 
-``` 
+``` cs
 public delegate int MathOperation(int x, int y);
 
 public class Calculator {
