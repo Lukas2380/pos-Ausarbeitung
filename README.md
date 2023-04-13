@@ -2,6 +2,13 @@
 
 ##  1) Datentypen und Datenkonvertierungen in C#
 
+---
+**Frage:**
+
+Nenne Sie die grundlegenden Arten von Datentypen in C# und gehen Sie genauer auf Wertetypen ein. Erklären Sie, wo und wie sie gespeichert und wofür sie verwendet werden. Beschreiben Sie auch die diversen Möglichkeiten der Datenkonvertierungen in C#. 
+
+---
+
 ### 1.1) Datentypen
 
 Werttypen und Verweistypen sind die beiden Hauptkategorien von C#-Typen.
@@ -80,6 +87,13 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
 
 
 ##  2) Collections in C#
+
+---
+**Frage:**
+
+Erklären Sie welche Datentypen sich hinter dem Begriff Collection in C# verbergen und was deren Einsatzgebiete sind. Vergleichen Sie diese Datentypen mit arrays, gehen Sie dabei auf die interne Speicherung und die konkrete Verwendung in C#-Programmen ein. Stellen Sie die Syntax eines Collections-Datentyps vor. 
+
+---
 
 Collections sind Datentypen in C#, die eine Gruppe von Objekten speichern. Die Collection-Typen umfassen beispielsweise List, Dictionary und Stack. Diese Datentypen sind sehr nützlich, um Daten zu organisieren und zu verwalten. Im Gegensatz zu Arrays können Collections dynamisch erweitert werden.
 
@@ -204,12 +218,12 @@ Ein Array ist jedoch eine feste Sammlung von Elementen, die bei der Deklaration 
 
 
 ## 3) Permanentes Speichern von Daten
-<kbd>
-Frage:
-</br>
+---
+**Frage:**
+
 Beschreiben Sie, wie Daten mit Hilfe von C#-Programmen permanent gespeichert werden können. Gehen Sie auf die Einsatzmöglichkeiten sowie die Vor- und Nachteile der unterschiedlichen Dateiarten ein und geben Sie auch Codebeispiele an.  
-was ist da gemeint
-</kbd>
+
+---
 In C# gibt es verschiedene Möglichkeiten, Daten permanent zu speichern. Hier sind einige Beispiele:
 
 ### 3.1) Textdateien
@@ -345,11 +359,15 @@ Datenbanken sind eine leistungsstarke Möglichkeit, Daten permanent zu speichern
 	```
 
 ## 4) Delegates
-<kbd>
-Frage:
-</br>
+
+---
+**Frage:**
+
 Erklären Sie, was man in C# unter Delegates versteht und wo sie verwendet werden. Zeigen Sie an Hand eines typischen Beispiels die C#-Syntax von Delegates.
-</kbd>
+
+---
+
+
 In C# ist ein Delegate ein spezieller Typ, der eine Referenz auf eine Methode mit einem bestimmten Signatur enthält. Mit Delegates können Methoden als Parameter an andere Methoden übergeben oder als Rückgabewert zurückgegeben werden.
 
 Delegates werden oft in der ereignisgesteuerten Programmierung verwendet, um Event-Handler-Funktionen zu definieren, die aufgerufen werden, wenn ein bestimmtes Ereignis eintritt. Delegates können auch in der asynchronen Programmierung und in der parallelen Programmierung nützlich sein.
