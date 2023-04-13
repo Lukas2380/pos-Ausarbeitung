@@ -48,7 +48,7 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
 * Expliziete Konvertierung
      Der Compiler fordert eine explizite Konvertierung wenn eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann. Will man einen String      in einen Integer umwandeln dann gibt es verschiedene Wege:
      
-    * <u>Cast<u>:
+    * **Cast**:
     
         ```c#
         string stringNum = "123";
@@ -56,14 +56,14 @@ Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp i
         ```
         Cast funktioniert nur dann, wenn der Wert des Strings tatsächlich in einen Integer umgewandelt werden kann.
 
-    * Verwendung der Methode `int.Parse()`
+    * **Verwendung der Methode `int.Parse()`**
     
         ```c#
         string stringNum = "123"; 
         int intNum = int.Parse(stringNum);
         ```
         `int.Parse()` funktioniert genau so wie `Convert.ToInt32()`. Bei beiden besteht das selbe Problem, dass genauso eine Ausnahme ausgelöst wird wenn die                   Umwandlung nicht gültig ist.
-    * Verwendung von `TryParse()`
+    * **Verwendung von `TryParse()`**
 
         ```c#
         string stringNum = "123";
