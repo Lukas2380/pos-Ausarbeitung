@@ -386,7 +386,7 @@ public delegate int PerformCalculation(int x, int y);
 * Methoden müssen nicht exakt mit dem Typ des Delegaten übereinstimmen (Varianz in Delgates).
 * Lambdaausdrücke sind eine präzisere Methode zum Schreiben von Inlinecodeblöcken. Lambdaausdrücke werden (in bestimmten Kontexten) in Delegattypen kompiliert.
 
-Hier ist ein Beispiel für die Verwendung von Delegates in C#:
+###### Beispiel: 
 
 ``` cs
 public delegate int MathOperation(int x, int y);
