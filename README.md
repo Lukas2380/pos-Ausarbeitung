@@ -120,7 +120,7 @@ public static void Main(string[] args)
 | Item[Int32] | Ruft das Element am angegebenen Index ab oder legt dieses fest. |
 Diese Eigenschaften sind nicht spezifisch für die List, andere Arten der Collection haben diese, vielleicht in einer leicht abweichenden Art, auch. 
 
-### `Dictionary <K,V>`
+### Dictionary \<K,V>
 Das Dictionary speichert eine Sammlung von Schlüssel-Wert-Paaren, wobei jeder Schlüssel eindeutig ist und auf einen bestimmten Wert verweist. Diese Collection ist besonders nützlich, wenn man schnell auf bestimmte Elemente zugreifen möchte.
 
 #### Beispiel:
@@ -178,7 +178,7 @@ Ein Stack ist eine Collection, die nach dem Prinzip "Last-In-First-Out" (LIFO) f
     *   Entfernt alle Element vom Stack.
 
 
-### `HashSet<T>`
+### HashSet\<T>
 Die `HashSet<T>` Klasse stellt hochperformante Vorgänge zu Verfügung. Das Set ist eine Auflistung, die keine doppelten Elemente enthält und wo diese sich in keiner Reihenfolge befinden. Neben den üblichen generischen Methoden wie Add, Count, Contains, Clear und vielen anderne verfügt die `HashSet<T>` Klasse auch viele Methoden die bekannt sind aus der Mengenlehre:
 
 +   `UnionWith`
