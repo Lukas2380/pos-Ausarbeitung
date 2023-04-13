@@ -30,7 +30,7 @@ Werttypen und Verweistypen sind die beiden Hauptkategorien von C#-Typen.
     MyClass myClass2 = myClass;
     ```
 
-* Datenkonvertierungen
+### 1.2) Datenkonvertierungen
 
 Datenkonvertierung ist der Prozess der Umwandlung von Daten von einem Datentyp in einen anderen. Es gibt zwei Arten von Datenkonvertierung:
 
