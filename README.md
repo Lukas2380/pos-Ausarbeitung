@@ -173,6 +173,8 @@ Das SortedDictionary und die Sorted List sind ähnlich strukturiert wie ein gew�
 
 ### Stack \<T>
 Ein Stack ist eine Collection, die nach dem Prinzip "Last-In-First-Out" (LIFO) funktioniert. Das letzte Element, das in den Stack eingefügt wird, ist das erste, das aus dem Stack entfernt wird.
+	
+![](https://f4n3x6c5.stackpathcdn.com/UploadFile/78607b/stack-in-C-Sharp/Images/Stack.jpg)
 #### Die wichtigesten Methoden:
 *   `Push(T item) `
     * Fügt ein Element oben auf den Stack hinzu.
