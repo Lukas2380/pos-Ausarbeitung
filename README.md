@@ -1,8 +1,8 @@
 # Pos-Ausarbeitung
 
-###  1) Datentypen und Datenkonvertierungen in C#
+##  1) Datentypen und Datenkonvertierungen in C#
 
-#### 1.1) Datentypen
+### 1.1) Datentypen
 
 Werttypen und Verweistypen sind die beiden Hauptkategorien von C#-Typen.
 
