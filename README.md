@@ -125,9 +125,7 @@ Das Dictionary speichert eine Sammlung von Schlüssel-Wert-Paaren, wobei jeder S
 
 #### Beispiel:
 ~~~cs
- Dictionary<String, Pupil> allPupils = new Dictionary<String,Pupil>();
- Pupil x = allPupils["Müller"]; 
- Console.WriteLine("${x.Vorname} {X.Nachname} {x.Klasse}");
+IDictionary<int, string> numberNames = new Dictionary<int, string>();
 ~~~
 
  * Die Schlüsselklasse muss Vergleichsoperationen durchführen können. Das heißt gegebenenfalls muss diese eine `CompareTo` Methode implementiert haben.
