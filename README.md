@@ -7,6 +7,7 @@
 Werttypen und Verweistypen sind die beiden Hauptkategorien von C#-Typen.
 
 * Wertetypen
+
     Wertetypen werden im Arbeitsspeicher direkt abgespeichert und enthalten einen Wert. Eine Variable eines Werttyps enthält eine Instanz des Typs. Jede Variable hat       eine eigene Kopie der Daten, und auf eine Variable angewendete Vorgänge können die anderen Variablen nicht beeinflussen.
 
 Wertetypen sind z.B:
@@ -19,7 +20,8 @@ Wertetypen sind z.B:
 | float            | Ganzzahlen + Gleitkommazahlen bis 7 Nachkommastellen |
 
 * Verweistypen
-Verweistypen beinhalten eine Referenz auf den Speicherort. Also einen Verweis auf eine Instanz des Typs. Dadurch, dass bei Verweistypen zwei Variablen auf dasselbe Objekt verweisen, können auf eine Variable angewendete Operationen das Objekt beeinflussen, auf das von der anderen Variablen verwiesen wird. 
+
+    Verweistypen beinhalten eine Referenz auf den Speicherort. Also einen Verweis auf eine Instanz des Typs. Dadurch, dass bei Verweistypen zwei Variablen auf dasselbe     Objekt verweisen, können auf eine Variable angewendete Operationen das Objekt beeinflussen, auf das von der anderen Variablen verwiesen wird. 
 
 Verweistypen sind Typen die als ```class```, `delegate`, `Array` oder `interface` definiert sind. Wenn eine Variable eines Verweistypen deklariert wird, dann enthält sie den Wert null, bis eine Instanz dieses Typs zugewiesen oder über den new-Operator eine Instanz erstellt wird. 
 Als Beispiel hier mit einer Klasse: 
