@@ -23,7 +23,7 @@ Verweistypen beinhalten eine Referenz auf den Speicherort. Also einen Verweis au
 
 Verweistypen sind Typen die als ```class```, `delegate`, `Array` oder `interface` definiert sind. Wenn eine Variable eines Verweistypen deklariert wird, dann enthält sie den Wert null, bis eine Instanz dieses Typs zugewiesen oder über den new-Operator eine Instanz erstellt wird. 
 Als Beispiel hier mit einer Klasse: 
-```
+```c#
 MyClass myClass = new MyClass();
 MyClass myClass2 = myClass;
 ```
